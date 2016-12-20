@@ -35,7 +35,12 @@ config = {
         server: {
             host: '0.0.0.0',
             port: process.env.GHOST_PORT || '2368'
+        },
+
+        paths: {
+            contentPath: path.join(__dirname, '/content/')
         }
+        
     },
 
     // ### Development **(default)**
