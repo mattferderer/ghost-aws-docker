@@ -2,6 +2,7 @@ FROM mhart/alpine-node:6.9
 
 ENV NODE_ENV production
 ENV SITE_URL http://localhost:2368
+ENV GHOST_PORT 2368
 
 WORKDIR /var/www
 RUN mkdir ghost
@@ -17,7 +18,7 @@ RUN chown ghost:www-data -R /var/www/ghost
 USER ghost
 RUN npm install --production
 
-EXPOSE 2368
+EXPOSE $GHOST_PORT
 
 VOLUME ["/var/www/ghost/content/data"]
 
