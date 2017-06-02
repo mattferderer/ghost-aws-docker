@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:6.9
+FROM mhart/alpine-node:6
 
 ENV NODE_ENV production
 ENV SITE_URL http://localhost:2368
